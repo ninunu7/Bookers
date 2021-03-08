@@ -1,2 +1,16 @@
-<h1>Books#index</h1>
-<p>Find me in app/views/books/index.html.erb</p>
+<head>
+    <h1>Books</h1>
+</head>
+<div class="main">
+    <div class="title">Title</div>
+    <div class="Body">Body</div>
+    <% @books.each do |book| %>
+    <%= link_to"Show",book_path(book) %>
+    <% end %>
+</div>
+
+
+</body>
+<footer>
+<%= form_with model:@book,url:'/books'local:true do |f| %>
+</footer>
