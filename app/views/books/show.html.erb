@@ -1,3 +1,9 @@
 <div class="show">Book was successfully created.</div>
-<%= link_to"削除",book_path(@book),method: :delete %>
+
+
+<div>Title:<%= @book.title %></div>
+<div>Body:<%= @book.body %></div>
+
+
+<%= link_to"edit",edit_book_path(@book)%>
 <%= link_to"back",books_path %>

@@ -13,7 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.main {
-   display: flex; /* Flexboxの利用 */
-}

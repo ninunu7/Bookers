@@ -5,19 +5,11 @@
     color: green;
 }
 
-.main {
-    display: flex;
-    justify-content: left;
-
-}
-
-.main2 {
-    display: inline-block;
-    display: flex;
-    justify-content: center;
-
-}
 
 .footer1 {
-    padding: 0px;
+    margin: 0px;
+}
+
+.footer2 {
+    display: block;
 }
