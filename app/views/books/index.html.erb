@@ -1,16 +1,40 @@
 <head>
     <h1>Books</h1>
 </head>
-<div class="main">
-    <div class="title">Title</div>
-    <div class="Body">Body</div>
-    <% @books.each do |book| %>
-    <%= link_to"Show",book_path(book) %>
-    <% end %>
+
 </div>
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @books.each do |book| %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.body %></td>
+        <td><%= link_to 'Show', book_path(book.id) %></td>
+        <td><%= link_to "edit", edit_book_path(book.id) %></td>
+        <td><%= link_to 'Destroy',book_path(@book.id),method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
 
 
 </body>
 <footer>
-<%= form_with model:@book,url:'/books'local:true do |f| %>
+    <h1>New Book</h1>
+    <%= form_with model:@book,url:'/books',local:true do |f| %>
+    <p class="footer1">Title</p>
+    <%=f.text_field:title %>
+    <p class="footer1">Body</p>
+    <%= f.text_area:body %>
+    <%=f.submit'Create Book' %>
+    <% end %>
 </footer>

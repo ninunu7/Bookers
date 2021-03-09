@@ -1,3 +1,23 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.show {
+    color: green;
+}
+
+.main {
+    display: flex;
+    justify-content: left;
+
+}
+
+.main2 {
+    display: inline-block;
+    display: flex;
+    justify-content: center;
+
+}
+
+.footer1 {
+    padding: 0px;
+}
