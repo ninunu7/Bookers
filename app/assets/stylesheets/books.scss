@@ -1,3 +1,66 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.success {
+    color: green;
+    padding-top: 25px;
+    padding-left: 50px;
+    font-size: 13px;
+}
+
+.show2 {
+    padding-left: 50px;
+    padding-top: 30px;
+    font-size: 13px;
+}
+
+.show3 {
+    cursor: pointer;
+    display: inline-block;
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+.edit2 {
+    font-size: 13px;
+margin: 10px 25px 0px;
+}
+
+.edit3 {
+    margin-left: 25px;
+}
+
+.edit4 {
+    margin-left: 25px;
+}
+
+.edit5 {
+    margin-top: 10px;
+    margin-left: 25px;
+}
+
+.edit6 {
+    display: inline-block;
+    font-size: 13px;
+}
+
+
+.footer1 {
+    margin: 0px;
+}
+
+.footer2 {
+    display: block;
+}
+
+.error {
+    background-color: red;
+    height: 150px;
+    line-height: 50px;
+    width: 400px;
+}
+
+li {
+    height: 30px;
+}

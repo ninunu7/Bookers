@@ -1,2 +1,22 @@
-<h1>Books#edit</h1>
-<p>Find me in app/views/books/edit.html.erb</p>
+<h1 class="edit1">Editing Book</h1>
+<% if @book.errors.any? %>
+        <div class="error"><%= @book.errors.count %>errors prohibited this book from being saved:
+        <ul>
+          <% @book.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+          <% end %>
+        </ul>
+        </div>
+      <% end %>
+<%= form_with model:@book,local:true do |f|%>
+<div class="edit2">Title</div>
+<div class="edit3"><%= f.text_field :title %></div>
+<div class="edit2">Body</div>
+<div class="edit3"><%= f.text_area :body %></div>
+<div class="edit4"><%=f.submit'Update Book'%></div>
+<% end %>
+<div class="edit5">
+    <div class="edit6"><%= link_to"Show",book_path(@book.id) %></div>
+    <div class="edit6">|</div>
+    <div class="edit6"><%= link_to"Back",books_path %></div>
+</div>
