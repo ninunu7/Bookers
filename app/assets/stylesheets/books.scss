@@ -22,15 +22,6 @@
     margin-top: 30px;
 }
 
-.show3:hover {
-    color: white;
-    background-color: black;
-}
-
-.show3:link {
-    color: black;
-}
-
 .edit2 {
     font-size: 13px;
 margin: 10px 25px 0px;
@@ -61,4 +52,12 @@ margin: 10px 25px 0px;
 
 .footer2 {
     display: block;
+}
+
+.error {
+    background-color: red;
+    height: 150px;
+    line-height: 50px;
+    width: 400px;
+     display: block;
 }
