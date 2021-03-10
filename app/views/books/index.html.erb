@@ -1,4 +1,4 @@
- <%= notice %>
+ <div class="success"><%= notice %></div>
 <head>
     <h1>Books</h1>
 </head>
@@ -24,16 +24,23 @@
 </table>
 
 
-
-
 </body>
 <footer>
     <h1>New Book</h1>
+
+
+
     <%= form_with model:@book,url:'/books',local:true do |f| %>
-    <p class="footer1">Title</p>
-    <%=f.text_field:title %>
-    <p class="footer1">Body</p>
-    <%= f.text_area:body %>
-    <p class="footer2"><%=f.submit'Create Book' %></p>
+      <% if @book.errors.any? %>
+        <%= @book.errors.count %>件のエラー
+        <% @book.errors.full_messages.each do |message| %>
+          <%= message %>
+      　<% end %>
+      <% end %>
+        <p class="footer1">Title</p>
+        <%=f.text_field:title %>
+        <p class="footer1">Body</p>
+        <%= f.text_area:body %>
+        <p class="footer2"><%=f.submit'Create Book' %></p>
     <% end %>
 </footer>
