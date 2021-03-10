@@ -1,9 +1,9 @@
-<div class="show">Book was successfully created.</div>
+<div class="show"><%= notice %></div>
 
 
-<div>Title:<%= @book.title %></div>
-<div>Body:<%= @book.body %></div>
+<div class="show2"><b>Title:</b><%= @book.title %></div>
+<div class="show2"><b>Body:</b><%= @book.body %></div>
 
 
-<%= link_to"edit",edit_book_path(@book)%>
-<%= link_to"back",books_path %>
+<div class="show3"><%= link_to"Edit",edit_book_path(@book)%></div>
+<div class="show3"><%= link_to"Back",books_path %></div>
